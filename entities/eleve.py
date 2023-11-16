@@ -8,6 +8,12 @@ class Eleve(Personne):
         super().__init__(Name, Surname, Age)
         self.__myclass= classe
 
+    @property
+    def myclasse(self):
+        return self.__myclasse
+
+    
+
     def inscription(self):
         Nom= input("veuillez saisir votre nom: ")
         prenom= input("veuillez saisir votre prenom: ")

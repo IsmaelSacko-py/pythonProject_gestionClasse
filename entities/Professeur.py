@@ -6,6 +6,20 @@ class Professeur(Personne):
         self._surmane = Surname
         self._matiere = Matiere
 
+    @property
+    def name(self):
+        return self.__name
+
+    @property
+    def surname(self):
+        return self.__surname
+
+    @property
+    def matiere(self):
+        return self.__matiere
+
+    
+
     def presentation(self):
         print(f"bonjour la classe je m'appelle mosieur{self.nom}")
 
