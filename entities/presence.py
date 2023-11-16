@@ -8,5 +8,24 @@ class Presence:
         self.__date = Date
         self.__present = Present
 
+    
+    @property
+    def eleve(self):
+        return self.__eleve
+
+    @property
+    def cours(self):
+        return self.__cours
+
+    @property
+    def date(self):
+        return self.__date
+
+    @property
+    def present(self):
+        return self.__present
+
+    
+
     def __repr__(self):
         return 'presence'

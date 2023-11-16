@@ -6,6 +6,10 @@ class Classe:
 
     def __repr__(self):
         return 'classe'
+
+    @property
+    def niveau(self):
+        return self.__niveau
     
 seconde= Classe("seconde")
 premiere= Classe("premiere")
