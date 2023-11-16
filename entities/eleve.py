@@ -1,10 +1,12 @@
-from personne import Personne
-from classe import *
-class eleve(Personne):
+from entities.personne import Personne
+from entities.classe import *
+
+
+class Eleve(Personne):
 
     def __init__(self, Name : str, Surname : str, Age : int, classe: Classe):
         super().__init__(Name, Surname, Age)
-        self.Myclass= classe
+        self.__myclass= classe
 
     def inscription(self):
         Nom= input("veuillez saisir votre nom: ")
@@ -16,3 +18,6 @@ class eleve(Personne):
         StudentClasse= nosClasses[VotreClasse-1]
 
         return Nom , prenom , StudentClasse
+
+    def __repr__(self):
+        return 'eleve'

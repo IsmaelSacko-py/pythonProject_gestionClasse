@@ -1,11 +1,10 @@
-from personne import Personne
+from entities.personne import Personne
 
 class Professeur(Personne):
-    def __init__(self, Name : str , Surname : str, Age: int):
+    def __init__(self, Name : str , Surname : str, Matiere):
         self._name = Name
         self._surmane = Surname
-        self._age = Age
-        self._matricule = self._name[0].upper() + self._surname[0].upper() + str(self._age)
+        self._matiere = Matiere
 
     def presentation(self):
         print(f"bonjour la classe je m'appelle mosieur{self.nom}")
@@ -15,3 +14,6 @@ class Professeur(Personne):
         
     def speakMatiere(self):
         print(f"aujourd'hui on fais la matiere {self.matiere}")
+
+    def __repr__(self):
+        return 'professeur'
